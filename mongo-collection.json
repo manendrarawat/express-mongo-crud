@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "7700f576-835f-42f7-b89a-825fee70fb88",
+		"name": "mongo-express-crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"manendra\",\n    \"email\": \"test@gmail.com\",\n    \"phone\": 123456,\n    \"place\": \"Karnataka\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"manendra\",\n    \"email\": \"test@gmail.com\",\n    \"phone\": 123456,\n    \"place\": \"Karnataka\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/5fc7ca8247ba071807116f7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"5fc7ca8247ba071807116f7d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"manendra\",\n    \"email\": \"test@gmail.com\",\n    \"phone\": 123456,\n    \"place\": \"Gwalior\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/update/5fc7ca8247ba071807116f7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"update",
+						"5fc7ca8247ba071807116f7d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-by-Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"manendra\",\n    \"email\": \"test@gmail.com\",\n    \"phone\": 123456,\n    \"place\": \"Karnataka\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/delete/5fc7ca8247ba071807116f7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"delete",
+						"5fc7ca8247ba071807116f7d"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
