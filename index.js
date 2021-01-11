@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const Address = require('./model/models')
 
 
-//I nitialize express app
+//Initialize express app
 const app = express();
 
 
@@ -14,8 +14,12 @@ app.use(bodyParser.json())
 
 
 // Connecting to DB
-mongoose.connect('mongodb://localhost:27017/AddressBook', {useNewUrlParser: true, useUnifiedTopology: true
-}).then(() => {
+mongoose.connect('mongodb://localhost:27017/AddressBook', 
+		{
+			useNewUrlParser: true, 
+			useUnifiedTopology: true
+		}
+).then(() => {
 	console.log('connected to db')
 }).catch((error) => {
 	console.log(error)
@@ -37,7 +41,7 @@ app.post('/register', (req, res) => {
 
 	name = req.body.name,
 	email = req.body.email,
-	phone = req.body.phone,
+	phone = req.body.password,
 	place = req.body.place
 
 	let newAddress = new Address({
